@@ -1,0 +1,55 @@
+﻿@page "/blog"
+
+@using SparksBlogBlazorApp.Models;
+
+@inject HttpClient Http
+
+<section id="article-thumbnails-section">
+    <section class="container">
+        <section class="row">
+            <section class="col-md-12">
+                @if (ArticleThumbnails == null)
+                {
+                    <h1>Loading...</h1>
+                }
+                else
+                {
+                    @foreach (var item in ArticleThumbnails)
+                    {
+                        <section class="article-thumbnail col-md-6">
+                            <section class="col-md-12">
+                                <h2>@item.Title</h2>
+                            </section>
+                            <section class="col-md-12">
+                                <ul>
+                                    <li>@item.CreatedDate.ToString("MM.dd.yyyy")</li>
+                                </ul>
+                            </section>
+                            <section class="col-md-12">
+                                <a class="btn" href="/post?id=@item.Id">Read More</a>
+                                @* <a class="btn" href="/post/@item.Id">Read More</a> *@
+                            </section>
+                        </section>
+                    }
+                }
+            </section>
+        </section>
+    </section>
+</section>
+
+@code {
+    private List<ArticleThumbnail> ArticleThumbnails;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var articleDataModel = await Http.GetFromJsonAsync<ArticleDataModel>("data/articles.json");
+            ArticleThumbnails = articleDataModel.Articles.OrderByDescending(x => x.CreatedDate).ToList();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+        }
+    }
+}

@@ -1,0 +1,67 @@
+﻿@page "/post"
+
+@using Markdig;
+@using SparksBlogBlazorApp.Models;
+@using SparksBlogBlazorApp.Shared;
+@using SparksBlogBlazorApp.Extensions;
+@inject HttpClient Http
+@inject NavigationManager NavManager
+@inject MarkdownPipeline MarkdownPipeline
+
+<div class="container-fluid">
+    <section id="article-title-section" class="row">
+        <section class="col-md-12 text-center">
+            @if (article == null)
+            {
+                <h1>Loading...</h1>
+            }
+            else
+            {
+                <h1>@article.Title</h1>
+            }
+        </section>
+        @if (article != null)
+        {
+            <section class="col-md-12 text-center">
+                <h3>Posted: @article.CreatedDate.ToString("MM/dd/yyyy")</h3>
+            </section>
+        }
+    </section>
+
+    @if (article != null)
+    {
+        <section id="article-content-section" class="row">
+            <section class="col-md-8 offset-md-2">
+                <div>
+                    @((MarkupString)Markdown.Parse(article.Content, MarkdownPipeline).ToHtml())
+                </div>
+            </section>
+        </section>
+    }
+</div>
+
+@code {
+    private Article article;
+    string id = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            NavManager.TryGetQueryString<string>("Id", out id);
+            var articlesResponse = await Http.GetFromJsonAsync<ArticleDataModel>("data/articles.json");
+            var articleData = articlesResponse.Articles.First(x => x.Id.ToLower() == id.ToLower());
+            var articleContent = await Http.GetStringAsync($"articles/{id.ToLower().ToString()}.md");
+            article = new Article
+                {
+                    Title = articleData.Title,
+                    CreatedDate = articleData.CreatedDate,
+                    Content = articleContent,
+                };
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+        }
+    }
+}

@@ -1,0 +1,125 @@
+﻿@page "/about"
+
+
+<div class="container-fluid">
+    <section id="about-intro-section" class="row">
+        <section class="col-md-6 offset-md-3">
+            @*<img class="img-fluid rounded-circle" src="/images/gradphoto.jpg" />*@
+            <section>
+                <h1>Collin Sparks</h1>
+                <p>I have been a Software Developer for @(DateTime.Now.Year - 2014) years. Software Development is not only my profession, but my passion as well.</p>
+            </section>
+        </section>
+    </section>
+    <section id="about-description-section" class="row title-summary">
+        <section class="col-md-8 offset-md-2">
+            <h3>About Me</h3>
+            <p>
+                I have experience professionally with Web Development as well as Mobile Development. In my spare time I enjoy working on a wide variety of different side projects to keep my skills sharp.
+                Game Development for example allows me to pit myself against challenges I do not find myself faced with in my professional work.
+            </p>
+        </section>
+    </section>
+</div>
+
+<div id="technology-section" class="container-fluid">
+    <div class="row">
+        <section class="col-md-8 offset-md-2 title-summary">
+            <h3>Technologies</h3>
+            <p>Years of experience have taught me the following technologies well:</p>
+        </section>
+    </div>
+    <div class="row">
+        <div class="col-md-5 offset-md-4">
+            <div class="container-fluid">
+                <div class="row row-cols-3 item-list-section-2">
+                    <div class="col"></div>
+                    <div class="col"><h3>Languages</h3></div>
+                    <div class="col"></div>
+                    @foreach (var language in Languages)
+                    {
+                        <div class="col"><span>@language</span></div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5 offset-md-4">
+            <div class="container-fluid">
+                <div class="row row-cols-3 item-list-section-2">
+                    <div class="col"></div>
+                    <div class="col"><h3>Frameworks</h3></div>
+                    <div class="col"></div>
+                    @foreach (var framework in Frameworks)
+                    {
+                        <div class="col"><span>@framework</span></div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="interest-section" class="container-fluid">
+    <div class="row">
+        <section class="col-md-8 offset-md-2 title-summary">
+            <h3>Interests</h3>
+            <p>When I do have spare time I spend most of it trying to learn something I have not had the opportunity to learn at work, or in school.</p>
+        </section>
+        <div class="col-md-5 offset-md-4">
+            <div class="container-fluid">
+                <div class="row row-cols-3 item-list-section-2">
+                    @foreach (var interest in Interests)
+                    {
+                        <div class="col"><span>@interest</span></div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<string> Languages = new List<string>() {
+        "C#",
+        "Objective-C",
+        "Java",
+        "C++",
+        "T-SQL",
+        "JavaScript",
+        "Rust",
+        "PHP",
+        "HTML",
+        "SCSS",
+        "CSS",
+        "Assembly",
+    };
+
+    private List<string> Frameworks = new List<string>() {
+        "ASP.NET Framework",
+        "ASP.NET Core",
+        "ASP.NET Web Forms",
+        "ASP.NET MVC",
+        "ASP.NET Web API",
+        ".NET Framework",
+        ".NET Core",
+        "Cocoa Touch",
+        "Entity Framework",
+        "Entity Framework Core",
+        "SQLite",
+        "SQL Server",
+        "JQuery",
+        "Unreal Engine 4",
+        "Blazor",
+    };
+
+    private List<string> Interests = new List<string>() {
+        "Unreal Engine 4",
+        "Virtual Reality",
+        "Artificial Intelligence",
+        "Chat Bots",
+        "Web Optimization",
+        "Game Engine Architecture",
+        "Embedded Systems",
+    };
+}

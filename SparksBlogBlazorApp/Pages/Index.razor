@@ -1,0 +1,39 @@
+﻿@page "/"
+@using System.Text.Json;
+
+<section id="home-background">
+    <div class="container">
+        <div class="row">
+            <section id="background-title" class="col-md">
+                <h1>Welcome</h1>
+                <h2>to my portfolio</h2>
+            </section>
+        </div>
+    </div>
+</section>
+<section id="introduction-section" class="container-fluid">
+    <div class="row">
+        <section class="col-md-8 offset-md-2 title-summary">
+            <h2>My name is Collin Sparks and I am a Software Developer.</h2>
+            <p>I am based in Georgia and I have worked professionally as a Software Developer for 6 years. My passion for programming has led me to learn a wide variety of frameworks and platforms. You can learn more about me on my <a href="about">about</a> page.</p>
+        </section>
+    </div>
+</section>
+@*<section id="recent-articles-section">
+        <section class="container">
+            <div class="row">
+                <section class="col-md-6 offset-md-3 title-summary">
+                    <h3>Recent Posts</h3>
+                </section>
+            </div>
+
+            <section class="row">
+                <section class="col-md-12">
+                    @foreach (var item in Model)
+                    {
+                        <partial name="ArticleThumbnail" model="@item" />
+                    }
+                </section>
+            </section>
+        </section>
+    </section>*@

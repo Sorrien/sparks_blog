@@ -1,0 +1,39 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <NavMenu />
+    <main>
+        <article class="body-content">
+            @Body
+        </article>
+
+        <footer id="footer-bottom" class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <ul id="social-media" class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/in/collin-sparks-b6065953/" rel="noreferrer" target="_blank" alt="Linkedin">
+                                <span aria-hidden="true" class="fa-stack 1x">
+                                    <i class="fa fa-circle fa-stack-2x media-icon-background"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/Sorrien" rel="noreferrer" target="_blank" alt="Github">
+                                <span aria-hidden="true" class="fa-stack 1x">
+                                    <i class="fa fa-circle fa-stack-2x media-icon-background"></i>
+                                    <i class="fa fa-github-alt fa-stack-1x"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="copyright">
+                        <p><span class="fa fa-copyright"></span> @DateTime.Now.Year - Collin Sparks </p>
+                        <p id="disclaimer">Disclaimer: Opinions expressed are solely my own and do not express the views or opinions of my employer.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+</div>

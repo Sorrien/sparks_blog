@@ -1,0 +1,32 @@
+﻿<nav class="navbar navbar-inverse container">
+    <a class="navbar-brand" href="#">Collin Sparks Portfolio</a>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                Home
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="blog">
+                Blog
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="about">
+                About
+            </NavLink>
+        </li>
+    </ul>
+</nav>
+<div class="navbar-underline"></div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
