@@ -1,0 +1,14 @@
+{
+  "Articles": [
+    {
+      "Title": "My New Static Blog",
+      "CreatedDate": "2023-11-06T21:57:40.84-05:00",
+      "Id": "mynewstaticblog"
+    },
+    {
+      "Title": "Newton's Cradle Simulation in a Browser",
+      "CreatedDate": "2023-11-07T21:57:40.84-05:00",
+      "Id": "newtonscradlesiminbrowser"
+    }
+  ]
+}
