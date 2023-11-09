@@ -1,1 +1,1 @@
-# sparks_blog
+# The blog of Collin Sparks
