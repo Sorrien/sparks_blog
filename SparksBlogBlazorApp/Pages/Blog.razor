@@ -3,6 +3,7 @@
 @using SparksBlogBlazorApp.Models;
 
 @inject HttpClient Http
+@inject NavigationManager Navigation
 
 <section id="article-thumbnails-section">
     <section class="container">
@@ -26,8 +27,7 @@
                                 </ul>
                             </section>
                             <section class="col-md-12">
-                                <a class="btn" href="/post?id=@item.Id">Read More</a>
-                                @* <a class="btn" href="/post/@item.Id">Read More</a> *@
+                                <a class="btn" @onclick="@(e => NavigateToArticle(@item.Id))">Read More</a>
                             </section>
                         </section>
                     }
@@ -39,6 +39,11 @@
 
 @code {
     private List<ArticleThumbnail> ArticleThumbnails;
+
+    private void NavigateToArticle(string articleId)
+    {
+        Navigation.NavigateTo($"post/{articleId}");
+    }
 
     protected override async Task OnInitializedAsync()
     {

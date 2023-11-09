@@ -1,4 +1,4 @@
-﻿@page "/post"
+﻿@page "/post/{id}"
 
 @using Markdig;
 @using SparksBlogBlazorApp.Models;
@@ -41,14 +41,15 @@
 </div>
 
 @code {
+    [Parameter]
+    public string id { get; set; }
+
     private Article article;
-    string id = "";
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            NavManager.TryGetQueryString<string>("Id", out id);
             var articlesResponse = await Http.GetFromJsonAsync<ArticleDataModel>("data/articles.json");
             var articleData = articlesResponse.Articles.First(x => x.Id.ToLower() == id.ToLower());
             var articleContent = await Http.GetStringAsync($"articles/{id.ToLower().ToString()}.md");
