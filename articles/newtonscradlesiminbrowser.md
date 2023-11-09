@@ -8,7 +8,9 @@ The beauty of Bevy's ability to compile to Web Assembly is that I don't need to 
 
 Go ahead, click play. I'll be right below when you get bored with it, and please: turn on your sound. I spent a long time tuning the clicks and clacks.
 
-<iframe src="https://sorrien.github.io/newtons_cradle/" style="border: none; width: 800px;height: 600px;"> </iframe>
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://sorrien.github.io/newtons_cradle/"></iframe>
+</div>
 
 I hope that was as entertaining to play with as it was to write. This version is embedded in an iframe but if you'd like to see the original page you can find it [here](https://sorrien.github.io/newtons_cradle/).
 
