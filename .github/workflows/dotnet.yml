@@ -1,6 +1,7 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
+
 name: Deploy to Github Pages
 
 on:
@@ -24,11 +25,7 @@ jobs:
        # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
       run: dotnet publish SparksBlogBlazorApp/SparksBlogBlazorApp.csproj -c Release -o release --nologo
-
-      # changes the base-tag in index.html from '/' to 'sparks_blog' to match GitHub Pages repository subdirectory
-    - name: Change base-tag in index.html from / to sparks_blog
-      run: sed -i 's/<base href="\/" \/>/<base href="\/sparks_blog\/" \/>/g' release/wwwroot/index.html
-    
+      
     # copy index.html to 404.html to serve the same file when a file is not found
     - name: copy index.html to 404.html
       run: cp release/wwwroot/index.html release/wwwroot/404.html
