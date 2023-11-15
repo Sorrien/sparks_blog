@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Built CSS
+site.css
+site.min.css
+site.min.css.gz

@@ -4,7 +4,7 @@
 I have rewritten my blog in many different .Net technologies over the years. It's the way I usually teach myself new things that I hope to later use at work.
 This rewrite is a bit different because my goal is to make the process of using and maintaining my blog as simple as I can.
 
-# Making a Static Site in Blazor
+# Blazor as a Static Site
 
 Similar to the last rewrite of my blog this one will use Blazor in its WASM form. If you aren't familiar with Web Assembly it is basically a compilation target for your language of choice to run in a browser.
 Practically speaking what this means is that I can avoid using Javascript and instead use whatever language I choose for clientside code. In this case we're talking about C# but I've also been experimenting with Rust and running 3D games in your browser with Bevy. More on that later. 

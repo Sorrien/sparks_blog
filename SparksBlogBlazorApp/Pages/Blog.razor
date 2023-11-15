@@ -1,8 +1,9 @@
 ﻿@page "/blog"
 
+@using SparksBlogBlazorApp.DataAccess;
 @using SparksBlogBlazorApp.Models;
 
-@inject HttpClient Http
+@inject IHostClient HostClient
 @inject NavigationManager Navigation
 
 <section id="article-thumbnails-section">
@@ -49,8 +50,15 @@
     {
         try
         {
-            var articleDataModel = await Http.GetFromJsonAsync<ArticleDataModel>("data/articles.json");
-            ArticleThumbnails = articleDataModel.Articles.OrderByDescending(x => x.CreatedDate).ToList();
+            var articleDataModel = await HostClient.GetArticleData();
+            if (articleDataModel is null)
+            {
+                Console.WriteLine("Failed to retrieve articles!");
+            }
+            else
+            {
+                ArticleThumbnails = articleDataModel.Articles.OrderByDescending(x => x.CreatedDate).ToList();
+            }
         }
         catch (Exception ex)
         {

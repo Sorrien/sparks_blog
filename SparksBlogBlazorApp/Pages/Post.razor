@@ -1,10 +1,11 @@
 ﻿@page "/post/{id}"
 
 @using Markdig;
+@using SparksBlogBlazorApp.DataAccess;
 @using SparksBlogBlazorApp.Models;
 @using SparksBlogBlazorApp.Shared;
-@using SparksBlogBlazorApp.Extensions;
-@inject HttpClient Http
+
+@inject IHostClient HostClient
 @inject NavigationManager NavManager
 @inject MarkdownPipeline MarkdownPipeline
 
@@ -42,23 +43,33 @@
 
 @code {
     [Parameter]
-    public string id { get; set; }
+    public string? Id { get; set; }
 
-    private Article article;
+    private Article? article;
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            var articlesResponse = await Http.GetFromJsonAsync<ArticleDataModel>("data/articles.json");
-            var articleData = articlesResponse.Articles.First(x => x.Id.ToLower() == id.ToLower());
-            var articleContent = await Http.GetStringAsync($"articles/{id.ToLower().ToString()}.md");
-            article = new Article
+            var articlesResponse = await HostClient.GetArticleData();
+            if (articlesResponse is null)
+            {
+                Console.WriteLine("Failed to retrieve articles!");
+            }
+            else
+            {
+                if (Id is not null)
                 {
-                    Title = articleData.Title,
-                    CreatedDate = articleData.CreatedDate,
-                    Content = articleContent,
-                };
+                    var articleData = articlesResponse.Articles.First(x => x.Id.ToLower() == Id.ToLower());
+                    var articleContent = await HostClient.GetArticleContent(Id);
+                    article = new Article
+                        {
+                            Title = articleData.Title,
+                            CreatedDate = articleData.CreatedDate,
+                            Content = articleContent,
+                        };
+                }
+            }
         }
         catch (Exception ex)
         {
