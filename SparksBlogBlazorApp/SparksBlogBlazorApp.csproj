@@ -19,7 +19,7 @@
 	</Target>
 
 	<Target Name="PreBuild" AfterTargets="ToolRestore">
-		<Exec Command="dotnet tool run webcompiler -r wwwroot" StandardOutputImportance="high" />
+		<Exec Command="dotnet webcompiler -r wwwroot" StandardOutputImportance="high" />
 	</Target>
 
 </Project>

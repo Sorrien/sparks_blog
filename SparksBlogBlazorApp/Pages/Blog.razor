@@ -10,7 +10,7 @@
     <section class="container">
         <section class="row">
             <section class="col-md-12">
-                @if (ArticleThumbnails == null)
+                @if (ArticleThumbnails is null)
                 {
                     <h1>Loading...</h1>
                 }
@@ -39,7 +39,7 @@
 </section>
 
 @code {
-    private List<ArticleThumbnail> ArticleThumbnails;
+    private List<ArticleThumbnail>? ArticleThumbnails;
 
     private void NavigateToArticle(string articleId)
     {
