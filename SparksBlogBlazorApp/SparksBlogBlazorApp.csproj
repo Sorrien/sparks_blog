@@ -14,11 +14,7 @@
 		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
 	</ItemGroup>
 
-	<Target Name="ToolRestore" BeforeTargets="PreBuildEvent">
-		<Exec Command="dotnet tool restore" StandardOutputImportance="high" />
-	</Target>
-
-	<Target Name="PreBuild" AfterTargets="ToolRestore">
+	<Target Name="CompileStaticAssets" AfterTargets="AfterBuild">
 		<Exec Command="dotnet webcompiler -r wwwroot" StandardOutputImportance="high" />
 	</Target>
 
