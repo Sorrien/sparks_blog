@@ -319,12 +319,12 @@ textarea.form-control {
 }
 
 #article-content-section {
-    @extend %bg-secondary-lighter;
+    @extend %bg-secondary-light;
 }
 /**/
 /*Blog Page Styles*/
 #article-thumbnails-section {
-    @extend %bg-secondary-lighter;
+    @extend %bg-secondary-light;
     padding-top: 50px;
 }
 
@@ -334,7 +334,6 @@ a.btn {
 }
 
 .article-thumbnail {
-    color: black;
     padding: 10px;
 
     img {

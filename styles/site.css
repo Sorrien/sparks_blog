@@ -14,16 +14,16 @@ $grey-light: #f4f4f4;*/
   color: white;
 }
 
-#services-section, #contact-us-section, #article-title-section, #interest-section, #about-intro-section, #introduction-section {
+#services-section, #contact-us-section, #article-thumbnails-section, #article-content-section, #article-title-section, #interest-section, #about-intro-section, #introduction-section {
   color: white;
   background-color: #282828;
 }
 
-.entity-table, #article-thumbnails-section, #article-content-section, #about-description-section, #recent-articles-section {
+.entity-table, #about-description-section, #recent-articles-section {
   background-color: #f4f4f4;
   color: #1b1b1b;
 }
-.entity-table h3, #article-thumbnails-section h3, #article-content-section h3, #about-description-section h3, #recent-articles-section h3 {
+.entity-table h3, #about-description-section h3, #recent-articles-section h3 {
   color: red;
 }
 
@@ -281,7 +281,6 @@ a.btn {
 }
 
 .article-thumbnail {
-  color: black;
   padding: 10px;
 }
 .article-thumbnail img {
