@@ -13,19 +13,23 @@ using System.Xml;
 if (args.Length > 0)
 {
     var filePath = args[0];
-    Console.WriteLine(filePath);
+    var fileInfo = new FileInfo(filePath);
+    Console.WriteLine(fileInfo.FullName);
+    var wwwrootPath = fileInfo.Directory.Parent.FullName;
+
     var articleDataString = await File.ReadAllTextAsync(filePath);
 
     var articleData = JsonSerializer.Deserialize<ArticleDataModel>(articleDataString);
 
-    GenerateFeed(articleData);
+    var resultFileName = "feed.xml";
+    GenerateFeed(articleData, $"{wwwrootPath}/{resultFileName}");
 }
 else
 {
     Console.WriteLine("Please include a data file.");
 }
 
-static void GenerateFeed(ArticleDataModel articleData)
+static void GenerateFeed(ArticleDataModel articleData, string path)
 {
     var blogUrl = "https://www.collinsparks.net";
 
@@ -59,5 +63,5 @@ static void GenerateFeed(ArticleDataModel articleData)
     var rssFormatter = new Rss20FeedFormatter(feed, false);
     rssFormatter.WriteTo(xmlWriter);
     xmlWriter.Flush();
-    File.WriteAllBytesAsync("wwwroot/feed.xml", stream.ToArray());
+    File.WriteAllBytesAsync(path, stream.ToArray());
 }
