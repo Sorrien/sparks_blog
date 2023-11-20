@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss
+  version="2.0">
+  <channel>
+    <title>Collin Sparks Blog</title>
+    <link>https://www.collinsparks.net/</link>
+    <description>This is the blog of Software Engineer Collin Sparks.</description>
+    <copyright>2023 Collin Sparks</copyright>
+    <lastBuildDate>Mon, 20 Nov 2023 03:02:53 Z</lastBuildDate>
+    <item>
+      <guid
+        isPermaLink="false">mynewstaticblog</guid>
+      <link>https://www.collinsparks.net/post/mynewstaticblog</link>
+      <title>My New Static Blog</title>
+      <description>Rewriting my blog again. This time to be static and easily hosted on Github Pages.</description>
+      <pubDate>Tue, 07 Nov 2023 02:57:40 Z</pubDate>
+    </item>
+    <item>
+      <guid
+        isPermaLink="false">newtonscradlesiminbrowser</guid>
+      <link>https://www.collinsparks.net/post/newtonscradlesiminbrowser</link>
+      <title>Newton's Cradle Sim in a Browser</title>
+      <description>Using Web Assembly to run a Newton's Cradle simulation in a browser with Rust and Bevy.</description>
+      <pubDate>Wed, 08 Nov 2023 02:57:40 Z</pubDate>
+    </item>
+  </channel>
+</rss>
