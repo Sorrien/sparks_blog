@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "SparksBlogBlazorApp",
   "resources": {
-    "hash": "sha256-fCIwcdL63tSXHMeUJW8TudYu5RCtvxuvnmy6ECgjXVc=",
+    "hash": "sha256-5o9W6LxqHEGQzJ7HWgCLdsrkxcQukOWhx7Hcltaefos=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.45ykigla5r.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -35,8 +35,8 @@
       "Microsoft.Extensions.Primitives.wasm": "sha256-6187ynEahDlSLMBvD4vAmiLpZ3clRb5xu6rM7O8AxNo=",
       "Microsoft.JSInterop.wasm": "sha256-lXwhdv0Is9FMH/j0+WH3zoNWAGLbVaONtGucJ/4URQ0=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-CQVLCKiSxLN5ghyJZG3mhnMGRROdqrbNUjtAXB0nWb8=",
-      "SparksBlogBlazorApp.Shared.wasm": "sha256-L4OOkntuWpoWofx5jfQ1tp9gFHi6BLldyWHxFm0qVew=",
-      "SparksBlogBlazorApp.wasm": "sha256-4Y3ysqgRdgcNdIhRD6Rk4zjxvnC1T7mYJJ7ISSLziuQ=",
+      "SparksBlogBlazorApp.Shared.wasm": "sha256-ElRvyDPq8mOHsgOTk9rF4enhCY/TMjvm+2gdll+PZGo=",
+      "SparksBlogBlazorApp.wasm": "sha256-PBx24tLrOvGzi9bYafDvlRItfkGvbOjAg0tEhibJTtw=",
       "System.Collections.Concurrent.wasm": "sha256-2O+/gaxJJ/IhemOxy+AR678m5O2+g3TXy4KQ83xkKqs=",
       "System.Collections.wasm": "sha256-kjnUNgNn9qZKYC+cWy5RtssCNKPHgXWXqi2t0GdxmfQ=",
       "System.ComponentModel.wasm": "sha256-Kg+Te+dUBA6OiPS3uVj+Poyamhf9bMlcL96uc+bTYWc=",
