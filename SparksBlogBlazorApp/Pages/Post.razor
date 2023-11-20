@@ -45,7 +45,7 @@
     @if (article != null)
     {
         <section id="article-content-section" class="row">
-            <section class="col-md-8 offset-md-2">
+            <section class="col-md-4 offset-md-4">
                 <div>
                     @((MarkupString)Markdown.Parse(article.Content, MarkdownPipeline).ToHtml())
                 </div>

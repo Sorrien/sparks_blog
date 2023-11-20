@@ -15,7 +15,9 @@ if (args.Length > 0)
     var filePath = args[0];
     var fileInfo = new FileInfo(filePath);
     Console.WriteLine(fileInfo.FullName);
+
     var wwwrootPath = fileInfo.Directory.Parent.FullName;
+    Console.WriteLine(wwwrootPath);
 
     var articleDataString = await File.ReadAllTextAsync(filePath);
 
