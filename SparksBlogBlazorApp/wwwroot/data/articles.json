@@ -1,14 +1,18 @@
 {
   "Articles": [
     {
+      "Id": "mynewstaticblog",
       "Title": "My New Static Blog",
+      "Description": "Rewriting my blog to be static and easily hosted.",
       "CreatedDate": "2023-11-06T21:57:40.84-05:00",
-      "Id": "mynewstaticblog"
+      "ModifiedDate": "2023-11-06T21:57:40.84-05:00"
     },
     {
+      "Id": "newtonscradlesiminbrowser",
       "Title": "Newton's Cradle Sim in a Browser",
+      "Description": "Using Web Assembly to run a Newton's Cradle simulation in a browser with Rust and Bevy.",
       "CreatedDate": "2023-11-07T21:57:40.84-05:00",
-      "Id": "newtonscradlesiminbrowser"
+      "ModifiedDate": "2023-11-07T21:57:40.84-05:00"
     }
   ]
 }

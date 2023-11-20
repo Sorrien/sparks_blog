@@ -14,11 +14,17 @@
 		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Shared\SparksBlogBlazorApp.Shared.csproj" />
+	</ItemGroup>
+
 	<Target Name="ToolRestore" BeforeTargets="PreBuildEvent">
-		<Exec Command="dotnet tool restore --tool-manifest ../.config/dotnet-tools.json" StandardOutputImportance="high" />
+		<Exec Command="dotnet pack ../RSSFeedGenerator/RSSFeedGenerator.csproj" StandardOutputImportance="high" />
+		<Exec Command="dotnet tool restore --add-source ../RSSFeedGenerator/nupkg" StandardOutputImportance="high" />
 	</Target>
 
 	<Target Name="PreBuild" AfterTargets="ToolRestore">
+		<Exec Command="dotnet tool run rssfeed wwwroot/data/articles.json" StandardOutputImportance="high" />
 		<Exec Command="dotnet tool run webcompiler -r wwwroot" StandardOutputImportance="high" />
 	</Target>
 

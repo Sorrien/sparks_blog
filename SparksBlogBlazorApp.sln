@@ -5,6 +5,10 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparksBlogBlazorApp", "SparksBlogBlazorApp\SparksBlogBlazorApp.csproj", "{E04C5190-E594-4D48-98EB-9EC2B2749297}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSSFeedGenerator", "RSSFeedGenerator\RSSFeedGenerator.csproj", "{09D920D5-5332-40EE-9039-EA17D2247A41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparksBlogBlazorApp.Shared", "Shared\SparksBlogBlazorApp.Shared.csproj", "{409777C7-7479-43CD-8233-A26EDC54A57A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{E04C5190-E594-4D48-98EB-9EC2B2749297}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E04C5190-E594-4D48-98EB-9EC2B2749297}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E04C5190-E594-4D48-98EB-9EC2B2749297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09D920D5-5332-40EE-9039-EA17D2247A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09D920D5-5332-40EE-9039-EA17D2247A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09D920D5-5332-40EE-9039-EA17D2247A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09D920D5-5332-40EE-9039-EA17D2247A41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{409777C7-7479-43CD-8233-A26EDC54A57A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{409777C7-7479-43CD-8233-A26EDC54A57A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{409777C7-7479-43CD-8233-A26EDC54A57A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{409777C7-7479-43CD-8233-A26EDC54A57A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

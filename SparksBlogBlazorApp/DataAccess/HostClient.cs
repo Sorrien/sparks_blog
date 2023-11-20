@@ -1,4 +1,4 @@
-﻿using SparksBlogBlazorApp.Models;
+﻿using SparksBlogBlazorApp.Shared.Models;
 using System.Net.Http.Json;
 
 namespace SparksBlogBlazorApp.DataAccess
@@ -12,10 +12,7 @@ namespace SparksBlogBlazorApp.DataAccess
     public class HostClient : IHostClient
     {
         private readonly HttpClient _client;
-        public HostClient(HttpClient client)
-        {
-            _client = client;
-        }
+        public HostClient(HttpClient client) => _client = client;
 
         public async Task<ArticleDataModel?> GetArticleData()
         {

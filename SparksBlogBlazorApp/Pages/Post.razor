@@ -9,6 +9,19 @@
 @inject NavigationManager NavManager
 @inject MarkdownPipeline MarkdownPipeline
 
+@if (article is not null)
+{
+    <PageTitle>@article.Metadata.Title</PageTitle>
+
+    <HeadContent>
+        <meta name="description" content="@article.Metadata.Description" />
+        @* OpenGraph meta tags *@
+        <meta name="og:url" content="@NavManager.Uri" />
+        <meta name="og:title" content="@article.Metadata.Title" />
+        <meta name="og:description" content="@article.Metadata.Description" />
+    </HeadContent>
+}
+
 <div class="container-fluid">
     <section id="article-title-section" class="row">
         <section class="col-md-12 text-center">
@@ -18,13 +31,13 @@
             }
             else
             {
-                <h1>@article.Title</h1>
+                <h1>@article.Metadata.Title</h1>
             }
         </section>
-        @if (article != null)
+        @if (article is not null)
         {
             <section class="col-md-12 text-center">
-                <h3>Posted: @article.CreatedDate.ToString("MM/dd/yyyy")</h3>
+                <h3>Posted: @article.Metadata.CreatedDate.ToString("MM/dd/yyyy")</h3>
             </section>
         }
     </section>
@@ -64,9 +77,8 @@
                     var articleContent = await HostClient.GetArticleContent(Id);
                     article = new Article
                         {
-                            Title = articleData.Title,
-                            CreatedDate = articleData.CreatedDate,
-                            Content = articleContent,
+                            Metadata = articleData,
+                            Content = articleContent
                         };
                 }
             }

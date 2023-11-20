@@ -7,6 +7,12 @@
       "commands": [
         "webcompiler"
       ]
+    },
+    "rssfeedgenerator": {
+      "version": "1.0.0",
+      "commands": [
+        "rssfeed"
+      ]
     }
   }
 }

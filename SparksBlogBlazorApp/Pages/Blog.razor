@@ -2,6 +2,7 @@
 
 @using SparksBlogBlazorApp.DataAccess;
 @using SparksBlogBlazorApp.Models;
+@using SparksBlogBlazorApp.Shared.Models;
 
 @inject IHostClient HostClient
 @inject NavigationManager Navigation
@@ -21,6 +22,7 @@
                         <section class="article-thumbnail col-md-6">
                             <section class="col-md-12">
                                 <h2>@item.Title</h2>
+                                <p>@item.Description</p>
                             </section>
                             <section class="col-md-12">
                                 <ul>
@@ -39,7 +41,7 @@
 </section>
 
 @code {
-    private List<ArticleThumbnail>? ArticleThumbnails;
+    private List<ArticleMetadata>? ArticleThumbnails;
 
     private void NavigateToArticle(string articleId)
     {

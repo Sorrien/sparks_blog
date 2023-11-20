@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "RSSFeedGenerator": {
+      "commandName": "Project",
+      "commandLineArgs": "wwwroot/data/articles.json",
+      "workingDirectory": "../SparksBlogBlazorApp/"
+    }
+  }
+}
