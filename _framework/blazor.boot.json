@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "SparksBlogBlazorApp",
   "resources": {
-    "hash": "sha256-FtqOqeTm4RLVO8gMVzoja5BJ/xfZuhw35X2Egmsw/Jk=",
+    "hash": "sha256-OnN2NiHAgNr8zsZN5EkY+qUhnxXSXmlWX9MroSJ+ky4=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.45ykigla5r.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -19,7 +19,7 @@
     "assembly": {
       "Markdig.wasm": "sha256-x36RPVhZhL6Z1mfRPQIVWinkoOIatcjb/DJce7085eM=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-N2eW1SLh3gGpp1WtX/7qVgBUoXk/5dqBTF3od1T4ZiA=",
-      "Microsoft.AspNetCore.Components.Web.wasm": "sha256-ivj7kxN8rrhTm1UV0H7dhsOewu6rhATFU2ZAG/YKLvA=",
+      "Microsoft.AspNetCore.Components.Web.wasm": "sha256-g5/jkWMtg6j1Ot1PpUGVgnm4YQXng6BOw3QjXnfgp5g=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-yTZmcBZLtgP+5caXFPiM/g/yLCK4BxhK6CHRT0u+Zlw=",
       "Microsoft.Extensions.Configuration.Abstractions.wasm": "sha256-87sn2TYqgdZ95sXmavjKEzoEfMgHnYQ9LOvnMX+aZcI=",
       "Microsoft.Extensions.Configuration.Json.wasm": "sha256-Sxmy2ZS134URxbHEvdbS6NcQ3zXS7UWx/5ZPpwiW7FA=",
@@ -35,7 +35,8 @@
       "Microsoft.Extensions.Primitives.wasm": "sha256-6187ynEahDlSLMBvD4vAmiLpZ3clRb5xu6rM7O8AxNo=",
       "Microsoft.JSInterop.wasm": "sha256-lXwhdv0Is9FMH/j0+WH3zoNWAGLbVaONtGucJ/4URQ0=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-CQVLCKiSxLN5ghyJZG3mhnMGRROdqrbNUjtAXB0nWb8=",
-      "SparksBlogBlazorApp.wasm": "sha256-d82kfFHTVGKLSp7KuGo2XGz0FbnT8jK/REq7TnFUnjk=",
+      "SparksBlogBlazorApp.Shared.wasm": "sha256-k9jyhKa8WavTAWkAiZEhihg5+/A9IHy13aZF5ks11yI=",
+      "SparksBlogBlazorApp.wasm": "sha256-e4vlCzaYrLMF5GbWB3g/ud038vvpkeAZIqce8emrqRk=",
       "System.Collections.Concurrent.wasm": "sha256-2O+/gaxJJ/IhemOxy+AR678m5O2+g3TXy4KQ83xkKqs=",
       "System.Collections.wasm": "sha256-kjnUNgNn9qZKYC+cWy5RtssCNKPHgXWXqi2t0GdxmfQ=",
       "System.ComponentModel.wasm": "sha256-Kg+Te+dUBA6OiPS3uVj+Poyamhf9bMlcL96uc+bTYWc=",
